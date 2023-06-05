@@ -1,0 +1,46 @@
+﻿@model RestoranJelaRPA.Models.Proizvod
+
+<h2> Brisanje proizvoda: @Model.Naziv</h2>
+<h4>Jeste li sigurni u brisanje iznad navedenog proizvoda?</h4>
+<div>
+    <h4>Proizvod</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cijena)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cijena)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sastojci)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sastojci)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Kategorija)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Kategorija.Naziv)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SlikaUrl)
+        </dt>
+        <dd class="col-sm-10">
+            <img width="100" height="100" src="@Html.DisplayFor(model => model.SlikaUrl)" alt="@Html.DisplayFor(model => model.Naziv)" />
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Obriši" class="btn btn-danger" />
+        <a asp-action="Index">Natrag na popis proizvoda</a>
+    </form>
+</div>

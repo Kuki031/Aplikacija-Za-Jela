@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap');
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    animation: fadeIn 0.5s;
+}
+
+body {
+    margin-bottom: 60px;
+    background: rgb(246,240,240);
+    background: linear-gradient(90deg, rgba(246,240,240,1) 5%, rgba(227,227,224,1) 100%);
+}
+
+.img{
+    width: 200px;
+    border:2px solid crimson;
+    transition: .2s;
+}
+
+.img:hover {
+    transform: scale(2.5);
+}
+* {
+    font-weight: bolder;
+    color: black;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.bg-img {
+    width: 1000px;
+    border: none;
+    border: 2px solid crimson;
+    transition: .2s;
+}
+.bg-img {
+    animation-duration: 0.5s;
+    animation-name: slidein;
+}
+#error-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    animation-duration: 0.5s;
+    animation-name: slidein;
+    color: crimson;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 1000px;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 1000px;
+    }
+}
+
+
+#recept {
+    font-family: 'Karla', sans-serif;
+}
+
+th {
+    color: crimson;
+}
+.btn {
+    padding: 10px;
+    cursor:pointer;
+    background-color: crimson;
+    color: whitesmoke;
+    border:none;
+    border-radius: 50px;
+    transition:.2s;
+}
+.btn:hover {
+    transform:scale(0.9);
+}
+.injected-div > p {
+    color: black;
+    animation: fadeIn 0.5s;
+}
+.main {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+    width: 1000px;
+}
+
+.injected-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 500px;
+    border: none;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.injected-div2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 500px;
+    border: none;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.injected-div > h3 {
+    font-weight: bolder;
+    color: crimson;
+    animation: fadeIn 0.5s;
+}
+.injected-div p > span {
+    color: black;
+    animation: fadeIn 0.5s;
+}
+.injected-div2 > img {
+    margin-left: -200px;
+    animation: fadeIn 0.5s;
+}
+.injected-div2 > h3 {
+    font-weight: bolder;
+    color: crimson;
+    animation: fadeIn 0.5s;
+}
+
+.injected-div2 p {
+    color: black;
+    animation: fadeIn 0.5s;
+}
+
+
+h3, p {
+    line-height: 40px;
+    width: 550px;
+}
+
+span {
+    margin-left: 10px;
+}
+.hidden {
+    display:none;
+}
+.injected-div2  > span{
+    color: black;
+}
+
+    .input::placeholder {
+        text-align: center;
+    }
+    .input {
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        border:none;
+        border-radius: 50px;
+    }
+    .line {
+        height:5px;
+        border:none;
+        border-radius: 100%;
+        background-color: crimson;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .za-api {
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        margin: auto;
+    }
+.injected-div {
+    animation: fadeIn 1s;
+}
+.injected2-div {
+    animation: fadeIn 1s;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

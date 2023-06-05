@@ -1,0 +1,22 @@
+﻿@model RestoranJelaRPA.Models.Kategorija
+
+<h2> Brisanje kategorije: @Model.Naziv</h2>
+<h4>Jeste li sigurni u brisanje iznad navedene kategorije?</h4>
+<div>
+    <h4>Kategorija</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Naziv)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Obriši" class="btn btn-danger" />
+        <a asp-action="Index">Natrag na popis kategorija</a>
+    </form>
+</div>

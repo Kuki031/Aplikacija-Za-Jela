@@ -1,0 +1,41 @@
+﻿@model RestoranJelaRPA.Models.Recept
+
+<h4>Recept</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @* mozda ne treba START - ovisi*@
+          
+            @* mozda ne treba KRAJ - ovisi*@
+            <div class="form-group">
+                <label asp-for="NazivJela" class="control-label"></label>
+                <input asp-for="NazivJela" class="form-control" />
+                <span asp-validation-for="NazivJela" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Opis" class="control-label"></label>
+                <input asp-for="Opis" class="form-control" />
+                <span asp-validation-for="Opis" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Spremi" class="btn btn-primary" />
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<div>
+    <a asp-action="Index">Natrag na popis recepata</a>
+</div>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial.cshtml");
+    }
+
+}
